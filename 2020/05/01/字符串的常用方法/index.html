@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>字符串的常用方法 | 面壁者的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串的常用方法  本文主要介绍了几种有关于字符串的简单的常用方法  find()、rfind()、index()、rindex()、count()find()和rfind方法分别用来查找一个字符串在另一个字符串指定范围（默认是整个字符串）中首次和最后一次出现的位置，如果不存在则返回-1index()和rindex()方法用来返回一个字符串在另一个字符串指定范围中首次和最后一次出现的位置，如果不存">
+  <meta name="description" content="本文主要介绍了几种有关于字符串的简单的常用方法  find()、rfind()、index()、rindex()、count()find()和rfind方法分别用来查找一个字符串在另一个字符串指定范围（默认是整个字符串）中首次和最后一次出现的位置，如果不存在则返回-1index()和rindex()方法用来返回一个字符串在另一个字符串指定范围中首次和最后一次出现的位置，如果不存在则抛出异常co">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字符串的常用方法">
 <meta property="og:url" content="http://yoursite.com/2020/05/01/%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="面壁者的博客">
-<meta property="og:description" content="字符串的常用方法  本文主要介绍了几种有关于字符串的简单的常用方法  find()、rfind()、index()、rindex()、count()find()和rfind方法分别用来查找一个字符串在另一个字符串指定范围（默认是整个字符串）中首次和最后一次出现的位置，如果不存在则返回-1index()和rindex()方法用来返回一个字符串在另一个字符串指定范围中首次和最后一次出现的位置，如果不存">
+<meta property="og:description" content="本文主要介绍了几种有关于字符串的简单的常用方法  find()、rfind()、index()、rindex()、count()find()和rfind方法分别用来查找一个字符串在另一个字符串指定范围（默认是整个字符串）中首次和最后一次出现的位置，如果不存在则返回-1index()和rindex()方法用来返回一个字符串在另一个字符串指定范围中首次和最后一次出现的位置，如果不存在则抛出异常co">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-01T07:42:04.000Z">
-<meta property="article:modified_time" content="2020-05-01T07:52:56.518Z">
+<meta property="article:modified_time" content="2020-05-01T08:02:10.883Z">
 <meta property="article:author" content="面壁者y">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -179,7 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="字符串的常用方法"><a href="#字符串的常用方法" class="headerlink" title="字符串的常用方法"></a>字符串的常用方法</h1><hr>
+        <hr>
 <blockquote>
 <p>本文主要介绍了几种有关于字符串的简单的常用方法</p>
 </blockquote>
@@ -187,16 +187,10 @@
 <a id="more"></a>
 <h4 id="split-、rsplit-、partition-、rpartition"><a href="#split-、rsplit-、partition-、rpartition" class="headerlink" title="split()、rsplit()、partition()、rpartition()"></a>split()、rsplit()、partition()、rpartition()</h4><p>split()和rsplit()方法分别用来以指定字符为分隔符，把当前字符串从左往右或从右往左分隔成多个字符串，并返回包含分隔结果的列表；<br> partition()和rpartition()用来以指定字符串为分隔符将原字符串分隔为3部分，即分隔符前的字符串、分隔符字符串、分隔符后的字符串，如果指定的分隔符不在原字符串中，则返回原字符串和两个空字符串。</p>
 <h4 id="join-、lower-、upper-、capitalize-、title-、swapcase"><a href="#join-、lower-、upper-、capitalize-、title-、swapcase" class="headerlink" title="join()、lower()、upper()、capitalize()、title()、swapcase()"></a>join()、lower()、upper()、capitalize()、title()、swapcase()</h4><p>join()字符连接串，lower()返回小写字符串，upper()返回大写字符串,capitalize()字符串首字母大写，title()每个单词首字母大写，swapcase()大小写互换</p>
-<h4 id="replace-、maketrans"><a href="#replace-、maketrans" class="headerlink" title="replace()、maketrans()"></a>replace()、maketrans()</h4><p>两者都是互换，前者是作为一个整体，后者是用映射表一一对应。具体例子如下：<br>replace():<br><code>text=(&#39;我去&#39;,&#39;卧槽&#39;,&#39;滚&#39;)
-words=&quot;诶呀卧槽，你给老子滚&quot;
-for word in text:
-    if word in words:
-        words=words.replace(word,&#39;***&#39;)
-print(words)
-诶呀***，你给老子***</code><br>maketrans():<br><code>table=&#39;&#39;.maketrans(&#39;abcdefg&#39;,&#39;ABCDEFG&#39;)
- s=&#39;apple banana&#39;
- s.translate(table)
-&#39;ApplE BAnAnA&#39;</code></p>
+<h4 id="replace-、maketrans"><a href="#replace-、maketrans" class="headerlink" title="replace()、maketrans()"></a>replace()、maketrans()</h4><p>两者都是互换，前者是作为一个整体，后者是用映射表一一对应。具体例子如下：<br>replace():</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">words&#x3D;&quot;诶呀卧槽，你给老子滚&quot;</span><br><span class="line">for word in text:</span><br><span class="line">    if word in words:</span><br><span class="line">        words&#x3D;words.replace(word,&#39;***&#39;)</span><br><span class="line">print(words)</span><br><span class="line">诶呀***，你给老子***</span><br></pre></td></tr></table></figure>
+<p>maketrans():</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> s&#x3D;&#39;apple banana&#39;</span><br><span class="line"> s.translate(table)</span><br><span class="line">&#39;ApplE BAnAnA&#39;</span><br></pre></td></tr></table></figure>
 <h4 id="strip-、rstrip-、lstrip"><a href="#strip-、rstrip-、lstrip" class="headerlink" title="strip()、rstrip()、lstrip()"></a>strip()、rstrip()、lstrip()</h4><p>strip()删除空白字符或指定字符，lstrip()删除左端字符，rstrip()删除右端字符</p>
 <h4 id="s-startswith-t-、s-endswith"><a href="#s-startswith-t-、s-endswith" class="headerlink" title="s.startswith(t)、s.endswith()"></a>s.startswith(t)、s.endswith()</h4><p>判断字符串是否以指定字符开始或结束，返回true或false</p>
 <h4 id="center-、ljust-、rjust"><a href="#center-、ljust-、rjust" class="headerlink" title="center()、ljust()、rjust()"></a>center()、ljust()、rjust()</h4><p>返回指定字符的新字符串，原字符串居中或左对齐或右对齐出现在新字符串当中如果指定宽度大于字符串长度，则使用指定字符进行填充，默认为空格。</p>
@@ -434,11 +428,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
