@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>数据类型扩展及面试题 | 面壁者的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据类型扩展及面试题Java是一种强类型语言（要求变量的使用严格符合规定，所有变量必须先定义后使用）。 数据类型主要分为以下8大类  拓展整数1234567891011public class demo &amp;#123;    public static void main(String[] args) &amp;#123;        &#x2F;&#x2F;整数拓展   二进制0b  八进制0  十进制   十六进制0x">
+  <meta name="description" content="数据类型扩展及面试题Java是一种强类型语言（要求变量的使用严格符合规定，所有变量必须先定义后使用）。 数据类型主要分为以下8大类">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据类型扩展及面试题">
 <meta property="og:url" content="http://yoursite.com/2020/11/10/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%89%A9%E5%B1%95%E5%8F%8A%E9%9D%A2%E8%AF%95%E9%A2%98/index.html">
 <meta property="og:site_name" content="面壁者的博客">
-<meta property="og:description" content="数据类型扩展及面试题Java是一种强类型语言（要求变量的使用严格符合规定，所有变量必须先定义后使用）。 数据类型主要分为以下8大类  拓展整数1234567891011public class demo &amp;#123;    public static void main(String[] args) &amp;#123;        &#x2F;&#x2F;整数拓展   二进制0b  八进制0  十进制   十六进制0x">
+<meta property="og:description" content="数据类型扩展及面试题Java是一种强类型语言（要求变量的使用严格符合规定，所有变量必须先定义后使用）。 数据类型主要分为以下8大类">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2020/11/10/P7ufKgtNJSO51zL.png">
 <meta property="article:published_time" content="2020-11-10T08:18:54.000Z">
-<meta property="article:modified_time" content="2020-11-10T08:37:34.741Z">
+<meta property="article:modified_time" content="2020-11-10T09:35:38.516Z">
 <meta property="article:author" content="面壁者y">
 <meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
@@ -184,6 +184,8 @@
         <h1 id="数据类型扩展及面试题"><a href="#数据类型扩展及面试题" class="headerlink" title="数据类型扩展及面试题"></a>数据类型扩展及面试题</h1><p>Java是一种强类型语言（要求变量的使用严格符合规定，所有变量必须先定义后使用）。</p>
 <p>数据类型主要分为以下8大类</p>
 <p><img src="https://i.loli.net/2020/11/10/P7ufKgtNJSO51zL.png" alt="JavaSE数据类型.png"></p>
+<a id="more"></a>
+
 <h2 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//整数拓展   二进制0b  八进制0  十进制   十六进制0x</span></span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">10</span>;</span><br><span class="line">        <span class="keyword">int</span> num1 = <span class="number">010</span>;</span><br><span class="line">        <span class="keyword">int</span> num2 = <span class="number">0x10</span>;</span><br><span class="line">        System.out.println(num);</span><br><span class="line">        System.out.println(num1);</span><br><span class="line">        System.out.println(num2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>输出的结果为10，8，16.</p>
@@ -193,7 +195,7 @@
 <p>输出结果为true.</p>
 <p>原因在于：</p>
 <blockquote>
-<p>浮点数的字长是有限的，也是离散的浮点数不能表示精确的值，它存在一个叫做舍入误差的问题，由于不能精确地表示，所以只能是一个大约数，接近但不等于。<strong>所以最好完全避免浮点数作比较</strong>。</p>
+<p>浮点数的字长是有限的，也是离散的浮点数不能表示精确的值，它存在一个叫做舍入误差的问题，由于不能精确地表示，所以只能是一个大约数，接近但不等于。<strong>所以最好完全避免浮点数作比较</strong>。这里可以用一个数学工具类BigDecimal。</p>
 </blockquote>
 <h3 id="字符"><a href="#字符" class="headerlink" title="字符"></a>字符</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">demo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span> c1=<span class="string">'a'</span>;</span><br><span class="line">        <span class="keyword">char</span> c2=<span class="string">'中'</span>;</span><br><span class="line">        System.out.println(c1);</span><br><span class="line">        System.out.println(c2);</span><br><span class="line">        System.out.println((<span class="keyword">int</span>)c1);</span><br><span class="line">        System.out.println((<span class="keyword">int</span>)c2);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">char</span> c3 = <span class="string">'\u0061'</span>;</span><br><span class="line">        System.out.println(c3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出结果为：<br>a<br>中<br>97<br>20013<br>a<br>这里涉及到强制转换地知识，将字符转换为Unicode编码。<strong>所有的字符本质还是数字</strong>。</p>
